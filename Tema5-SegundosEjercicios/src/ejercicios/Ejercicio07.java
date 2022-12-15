@@ -23,12 +23,12 @@ public class Ejercicio07 {
 			System.out.println("Lo sentimos, ha perdido.");
 			
 			for(int i = 0; i < acierto.length; i++) {
-				for(int j = 0; j < apuesta.length; j++) {
-					if(apuesta[j] == acierto[i]) {
-						coincidencias++;
-					}
+				int posicion = Arrays.binarySearch(acierto, apuesta[i]);
+				if(posicion >= 0) {
+					coincidencias++;
 				}
 			}
+		}
 			if(coincidencias != 0) {
 				System.out.print("Sin embargo, ha acertado " + coincidencias + " números.");
 			}
@@ -36,6 +36,5 @@ public class Ejercicio07 {
 				System.out.print("Pero es que no has dado ni una.");
 			}
 		}
-	}
-
 }
+
