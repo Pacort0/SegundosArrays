@@ -11,14 +11,9 @@ public class Ejercicio07 {
 		
 		for(int i = 0; i < (apuesta.length); i++) {
 			apuesta[i] = (int)(Math.random()*(49 - 1) + 1); 
-		}
-		for(int i = 0; i < (acierto.length); i++) {
 			acierto[i] = (int)(Math.random()*(49 - 1) + 1);
 		}
-		System.out.println(Arrays.toString(acierto));
-		System.out.println(Arrays.toString(apuesta));
-		
-		
+
 		Arrays.sort(acierto);
 		
 		if(Arrays.equals(apuesta, acierto)) {
